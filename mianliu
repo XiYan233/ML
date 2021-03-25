@@ -12,38 +12,23 @@ echo -e "请选择要安装的流控类型："
 echo -e "\033[31m1. 青云最新版            CentOS 7.x 64位 \033[0m"
 echo -e "\033[32m2. FAS3.0最新版          CentOS 7.x 64位 \033[0m"
 echo -e "\033[33m3. 快云6期优化版         CentOS 7.x 64位 \033[0m"
-echo -e "\033[35m4. VPNS流控              CentOS 7.x 64位 \033[0m"
-echo -e "\033[36m5. 博雅DALO流控(原版)    CentOS 6.x 64位 \033[0m"
-echo -e "\033[37m6. 博雅DALO流控(新版)    CentOS 6.x 64位 \033[0m"
-echo -e "\033[34m7. 服务器测速                            \033[0m"
+echo -e "\033[34m4. 服务器测速                            \033[0m"
 echo -n "请输入安装选项并回车："
 
 read install_type
 if [ $install_type == 1 ];then
-     wget -q http://down.osuu.net/op/qyun.sh -O qyun.sh && chmod 0777 qyun.sh  && bash qyun.sh 
+     wget -q https://raw.githubusercontent.com/Demontisa/ML/main/op/qyun/qyun.sh -O qyun.sh && chmod 0777 qyun.sh  && bash qyun.sh 
 	exit 0
 fi 
 if [ $install_type == 2 ];then
-    wget -q http://down.osuu.net/op/fas.sh -O fas.sh && chmod 0777 fas.sh  && bash fas.sh
+    wget -q https://raw.githubusercontent.com/Demontisa/ML/main/op/fas/fas.sh -O fas.sh && chmod 0777 fas.sh  && bash fas.sh
 	exit 0
 fi 
 if [ $install_type == 3 ];then
-    wget -q http://down.osuu.net/op/kyun.sh -O kyun.sh && chmod 0777 kyun.sh  && bash kyun.sh
+    wget -q https://raw.githubusercontent.com/Demontisa/ML/main/op/kyun/kyun.sh -O kyun.sh && chmod 0777 kyun.sh  && bash kyun.sh
 	exit 0
 fi 
 if [ $install_type == 4 ];then
-    wget -q http://down.osuu.net/op/vpns.sh -O vpns.sh && chmod 0777 vpns.sh  && bash vpns.sh
-	exit 0
-fi 
-if [ $install_type == 5 ];then
-    wget -q http://down.osuu.net/op/dalo.sh -O dalo.sh && chmod 0777 dalo.sh  && bash dalo.sh
-	exit 0
-fi 
-if [ $install_type == 6 ];then
-    wget -q http://down.osuu.net/op/new_dalo.sh -O new_dalo.sh && chmod 0777 new_dalo.sh  && bash new_dalo.sh
-	exit 0
-fi 
-if [ $install_type == 7 ];then
     wget -q https://raw.githubusercontent.com/oooldking/script/master/superspeed.sh -O superspeed.sh && chmod 0777 superspeed.sh  && bash superspeed.sh
 	exit 0
 fi 
