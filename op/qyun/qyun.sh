@@ -1186,12 +1186,12 @@ systemctl stop ntpd.service >/dev/null 2>&1
 service ntpd stop >/dev/null 2>&1
 \cp -rf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime >/dev/null 2>&1
 ntpServer=(
-[0]=s2c.time.edu.cn
-[1]=s2m.time.edu.cn
-[2]=s1a.time.edu.cn
-[3]=s2g.time.edu.cn
-[4]=s2k.time.edu.cn
-[5]=cn.ntp.org.cn
+[0]=ntp.aliyun.com
+[1]=time1.cloud.tencent.com
+[2]=time2.cloud.tencent.com
+[3]=time3.cloud.tencent.com
+[4]=time4.cloud.tencent.com
+[5]=ntp.tuna.tsinghua.edu.cn
 )
 serverNum=`echo ${#ntpServer[*]}`
 NUM=0
